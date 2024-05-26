@@ -1,5 +1,5 @@
 
-import './style.css'
+import './style.scss'
 
 const Login = () => {
     return (
