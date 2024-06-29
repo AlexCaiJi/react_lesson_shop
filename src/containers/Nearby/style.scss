@@ -1,0 +1,83 @@
+.nearby-page {
+    .title {
+        position: relative;
+        color: #242424;
+        font-size: .18rem;
+        line-height: .44rem;
+        text-align: center;
+        &-icon {
+            position: absolute;
+            left: .1rem;
+            top: 0;
+        }
+    }
+    .search {
+        position: relative;
+        padding: 0 .1rem;
+        font-size: .14rem;
+        color: #242424;
+        &-icon {
+            position: absolute;
+            left: .2rem;
+            top: .1rem;
+        }
+        &-input {
+            padding: 0 .2rem 0 .34rem;
+            height: .34rem;
+            line-height: .34rem;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: .17rem;
+            background: #F5F9FA;
+            font-size: .14rem;
+            line-height: .21rem;
+            text-align: left;
+            display: block;
+        
+            outline: none;
+            border: none;
+        }
+    }
+    .subtitle {
+        color: #B1B1B1;
+        font-size: .12rem;
+        line-height: .18rem;
+        padding: .2rem .1rem .07rem .2rem;
+    }
+    .list {
+        &-item {
+            margin-bottom: .09rem;
+            display: flex;
+            &-left {
+                margin-left: .24rem;
+                flex: 1;
+            }
+            &-right {
+                width: .6rem;
+                color: #6E6E6E;
+                font-size: .12rem;
+                line-height: .18rem;
+                text-align: right;
+                margin-top: .3rem;
+                margin-right: .24rem;
+            }
+            &-title {
+                color: #242424;
+                font-size: .15rem;
+                line-height: .18rem;
+                text-align: left;
+                margin-bottom: .06rem;
+            }
+            &-desc {
+                margin-bottom: .02rem;
+                color: #6E6E6E;
+                font-size: .12rem;
+                line-height: .18rem;
+            }
+            &-distance {
+                margin-right: .04rem;
+            }
+        }
+    }
+}
+

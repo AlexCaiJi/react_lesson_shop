@@ -1,7 +1,7 @@
 // import { useCallback, useEffect, useRef } from 'react';
 import { useEffect, useRef } from 'react';
 import './style.scss'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 // const useRefAnimation = () => {
@@ -25,7 +25,12 @@ function Guide() {
   // },[navigate]);
   const navigate = useNavigate();
   function handleIconClick() {
-    navigate('./login');
+
+    if (localStorage.getItem('token')) {
+      navigate('/home');
+    } else {
+      navigate('/account/login');
+    }
   }
 
   return (

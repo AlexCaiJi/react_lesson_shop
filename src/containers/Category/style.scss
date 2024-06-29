@@ -1,0 +1,295 @@
+.category-page {
+    font-size: .14rem;
+    overflow-y: scroll;
+    position: relative;
+
+    .title {
+        position: relative;
+        color: #242424;
+        background: #FFF;
+        font-size: .18rem;
+        line-height: .44rem;
+        text-align: center;
+    }
+
+    .search {
+        display: flex;
+        padding: .06rem .1rem;
+
+        &-area {
+            border-radius: .16rem;
+            background: #F5F9FA;
+            display: flex;
+            flex: 1;
+            line-height: .32rem;
+
+            .search-icon {
+                width: .3rem;
+                font-size: .14rem;
+                text-align: center;
+            }
+
+            .search-input {
+                flex: 1;
+                background: none;
+                outline: none;
+                border: none;
+                color: #242424;
+                padding-right: .1rem;
+            }
+        }
+    }
+
+    .category {
+        position: absolute;
+        overflow-y: scroll;
+        left: 0;
+        top: .88rem;
+        bottom: .5rem;
+        width: .96rem;
+        background: #F5F9FA;
+
+        &-item {
+            color: #242424;
+            font-size: .14rem;
+            line-height: .52rem;
+            text-align: center;
+
+            &-active {
+                background: #FFF;
+            }
+        }
+
+    }
+
+    .tag {
+        position: absolute;
+        overflow-x: scroll;
+        left: .96rem;
+        top: .88rem;
+        right: 0;
+        height: .52rem;
+        white-space: nowrap;
+
+        &-item {
+            height: .35rem;
+            line-height: .35rem;
+            width: .7rem;
+            font-size: .14rem;
+            display: inline-block;
+            text-align: center;
+            background: #F5F9FA;
+            margin-left: .1rem;
+            border-radius: .05rem;
+
+            &-active {
+                background: #D9F7BE;
+                color: #52C41A;
+            }
+        }
+    }
+
+    .product {
+        position: absolute;
+        left: .96rem;
+        top: 1.4rem;
+        right: 0;
+        bottom: .5rem;
+        font-size: .14rem;
+        padding: .1rem;
+        overflow-y: scroll;
+        &-title {
+            margin: .08rem;
+            font-size: .12rem;
+            line-height: .16rem;
+        }
+        &-item {
+            display: flex;
+            position: relative;
+            padding: .1rem;
+            &-img {
+                width: .78rem;
+                height: .78rem;
+                margin-right: .08rem;
+            }
+
+            &-content {
+                flex: 1;
+            }
+
+            &-title {
+                color: #242424;
+                font-size: .14rem;
+                line-height: .21rem;
+            }
+
+            &-sales {
+                margin-top: .1rem;
+                font-size: .12rem;
+                line-height: .16rem;
+                color: #B1B1B1;
+            }
+
+            &-price {
+                margin-top: .1rem;
+                font-size: .16rem;
+                line-height: .24rem;
+                color: #CF1322;
+                &-yen {
+                    font-size: .12rem;
+                    margin-left: .02rem;
+                }
+            }
+
+            &-button {
+                position: absolute;
+                bottom: .1rem;
+                right: .1rem;
+                background: #73D13D;
+                color: #FFF;
+                width: .4rem;
+                line-height: .24rem;
+                text-align: center;
+                border-radius: .04rem;
+            }
+        }
+    }
+    
+    .cart {
+        &-content {
+            padding: .2rem .2rem .34rem .2rem;
+            border-bottom: .01rem solid #F4F4F4;
+            display: flex;
+
+            &-img {
+                margin-right: .48rem;
+                display: block;
+                width: .7rem;
+                height: .7rem;
+            }
+
+            &-info {
+                font-size: .16rem;
+            }
+
+            &-title {
+                margin-right: .45rem;
+                color: #242424;
+                line-height: .18rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                white-space: normal;
+                word-break: break-all;
+            }
+
+            &-price {
+                color: #F81C00;
+                font-size: .22rem;
+                font-weight: bold;
+                margin-top: .13rem;
+
+                &-yen {
+                    font-size: .14rem;
+                    margin-right: .02rem;
+                    font-weight: normal;
+                }
+            }
+        }
+
+        &-count {
+            padding: .35rem .16rem;
+
+            &-content {
+                height: .28rem;
+                line-height: .28rem;
+                color: #242424;
+                font-size: .14rem;
+            }
+
+            &-counter {
+                float: right;
+                font-size: 0;
+            }
+
+            &-button,
+            &-text {
+                display: inline-block;
+                font-size: .18rem;
+                line-height: .28rem;
+                text-align: center;
+                background: #F4F4F4;
+            }
+
+            &-button {
+                width: .28rem;
+            }
+
+            &-text {
+                margin: 0 .1rem;
+                padding: 0 .08rem;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            // margin: .1rem .16rem;
+            // border-radius: .22rem;
+            // background: #73D13D;
+            // height: .44rem;
+            // line-height: .44rem;
+            // font-size: .16rem;
+            // color: #FFF;
+            // text-align: center;
+        }
+        &-button {
+            flex: 1;
+            background: #73D13D;
+            font-size: .16rem;
+            margin: .1rem .16rem;
+            color: #FFF;
+            border-radius: .22rem;
+            line-height: .40rem;
+            height: .40rem;
+            text-align: center;
+            &-left {
+                margin-left: .16rem;
+                margin-right: .12rem;
+            }
+            &-right {
+                margin-left: .12rem;
+                margin-right: .16rem;
+            }
+        }
+    }
+
+    .docker {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: .49rem;
+        z-index: 3;
+        border-top: .01rem solid #F5F9FA;
+        display: flex;
+        font-size: .11rem;
+        color: #B3C1C4;
+        background: #FFF;
+        text-align: center;
+
+        &-item {
+            flex: 1;
+
+            &-icon {
+                margin: .04rem 0;
+                font-size: .18rem;
+            }
+        }
+
+        &-item-active {
+            color: #73D13D;
+        }
+    }
+}

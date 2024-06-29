@@ -189,23 +189,95 @@
 
 
 /// **********
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
+// import { createHashRouter, HashRouter, Route, RouterProvider, Routes } from 'react-router-dom';
 // import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import 'normalize.css'
 import './styles/base.css'
 import './styles/border.css'
 import Guide from './containers/Guide';
-import Login from './containers/Login';
+import Login from './containers/Account/Login';
+import Register from './containers/Account/Register';
+import Account from './containers/Account';
+import Home from './containers/Home';
+import Nearby from './containers/Nearby';
+import Search from './containers/Search';
+import SearchList from './containers/SearchList';
+import Detail from './containers/Detail';
+import Category from './containers/Category';
+import Cart from './containers/Cart';
+import Order from './containers/Order';
+
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Guide />,
+  },
+  {
+    path: "/account",
+    element: <Account />,
+    children: [
+      { path: "/account/login", element: <Login /> },
+      { path: "/account/register", element: <Register /> },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/nearby",
+    element: <Nearby />,
+  },
+  {
+    path: "/search",
+    element: <Search />,
+  },
+  {
+    path: "/searchList/:shopId/:keyword",
+    element: <SearchList />,
+  },
+  {
+    path: "/detail/:id",
+    element: <Detail />,
+  },
+  {
+    path: "/category",
+    element: <Category />,
+  },
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+  {
+    path: "/order/:id",
+    element: <Order />,
+  },
+  {
+    path: "*",
+    element: <Home />,
+  },
+]);
 
 function App() {
-  return (
-    <HashRouter>
-      <Routes>
-       <Route path='/' element={<Guide/>} />
-       <Route path='/login' element={<Login/>} />
-      </Routes>
-    </HashRouter>
-  );
+  // return (
+  //   <HashRouter>
+  //     <Routes>
+  //      <Route path='/' element={<Guide/>} />
+  //      <Route path='/login' element={<Login/>} />
+  //      <Route path='/register' element={<Register/>} />
+  //     </Routes>
+  //   </HashRouter>
+  // );
+  return <RouterProvider router={router} />
 }
 
 export default App;

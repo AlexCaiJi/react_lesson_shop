@@ -1,4 +1,4 @@
-.login-page {
+.account-page {
     .tab {
         line-height: .24rem;
         font-size: .18rem;
@@ -6,27 +6,27 @@
         color: #242424;
         width: 1.14rem;
         margin: 0 auto;
+        a {
+            color: #242424;
+            text-decoration: none;
+        }
     }
-
     .tab-item {
         display: inline-block;
         font-weight: bold;
-
-        &-left {
-            color: #73D13D;
+        &-active {
+            a {
+                color: #73D13D !important; 
+            }
         }
-
         &-right {
             float: right;
         }
+        a {
+            color: black;
+            text-decoration: none;
+        }
     }
-
-    // .tab-item-left {
-    //     color: #73D13D;
-    // }
-    // .tab-item-right {
-    //     float: right;
-    // }
     .form {
         margin-bottom: .6rem;
 
@@ -37,8 +37,8 @@
             font-size: .16rem;
 
             &-title {
-                width: .48rem;
-                margin-right: .30rem;
+                width: .7rem;
+                margin-right: .2rem;
             }
 
             &-content {
@@ -53,26 +53,6 @@
             }
         }
     }
-
-    // .form-item {
-    //     display: flex;
-    //     padding: .16rem .3rem;
-    //     line-height: .24rem;
-    //     font-size: .16rem;
-    // }
-    // .form-item-title {
-    //     width: .48rem;
-    //     margin-right: .30rem;
-    // }
-    // .form-item-content {
-    //     flex: auto;
-    //     border: none;
-    //     outline: none;
-    //     color: #242424;
-    // }
-    // .form-item-content::placeholder {
-    //     color: #D9D9D9;
-    // }
     .submit {
         margin: 0 .3rem .94rem .3rem;
         line-height: .5rem;
@@ -83,7 +63,6 @@
         color: #FFF;
         text-align: center;
     }
-
     .notice {
         color: #CF1322;
         font-weight: regular;
